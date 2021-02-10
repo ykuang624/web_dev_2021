@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Cards</title>
+    <style media="screen">
+      #cards img {
+        width: 200px;
+        box-shadow: 4px 4px 4px #999;
+        margin-right: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container mt-3">
+
+      <div class="row">
+        <div class="col mx-auto text-center">
+          <h3><a href="#" id="deal_cards">Click to deal a new hand of cards</a></h3>
+          <div id="cards" class="mt-5">
+            <img src="images/ace_of_diamonds.png">
+            <img src="images/2_of_diamonds.png">
+            <img src="images/3_of_diamonds.png">
+            <img src="images/4_of_diamonds.png">
+            <img src="images/5_of_diamonds.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  
+  <script>
+    // Find the prefix
+    let pickRandomPrefix = function() {
+      var dict = {11:"ace",12:"jack", 13:"king",14:"king"};
+      var prefix =  Math.floor(Math.random() * (15 - 2)) + 2;
+      if (prefix in dict){
+        prefix =  dict[prefix];
+      }
+      return prefix;
+    }
+    // Find the postfix
+    let pickRandomPostfix = function(){
+      var list = Array("hearts","diamonds","clubs","spades");
+      postfix = list[Math.floor(Math.random()*list.length)];
+      return postfix;
+    }
+    // generate new image name
+    let pickCard = function(cards_used){
+      let prefix = pickRandomPrefix();
+      let postfix = pickRandomPostfix();
+      let cardName = "images/" + prefix +"_of_" + postfix+ ".png";
+      if (cards_used.includes(cardName)){
+        // console.log("entered recursion")
+        return pickCard(cards_used)
+      }else{
+        return cardName
+      }
+      
+    }
+    // Event Listener for #deal_cards
+    document.addEventListener("DOMContentLoaded", function() {
+      let dealLink = document.querySelector("#deal_cards");
+      dealLink.addEventListener("click", function() {
+      console.log("Link clicked.")
+      images = document.querySelectorAll("img")
+      let i = 0
+      let cards_used = Array();
+      // Change every image's source
+      for (const image of images){
+        cardName = pickCard(cards_used)
+        cards_used.push(cardName)
+        images[i].src = cardName;
+        i = i+1;
+      }     
+    
+      
+    })
+})
+  </script>
+</html>

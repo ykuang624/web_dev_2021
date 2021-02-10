@@ -1,0 +1,50 @@
+.Head{
+    width: 40%;
+    margin:auto;
+    padding-top: 5%;
+}
+
+.Nav, .Content{
+    display: flex;
+    justify-content: center;
+}
+text{
+    padding: 3%;
+}
+.Content{
+    width:70%;
+    margin:auto
+}
+.column{
+    width: 33%;
+    border-right: solid 2px lightgrey;
+    padding: 10px;
+}
+#person{
+    width: 90%;
+    margin-left: 5%;
+    margin-right:5%;
+    /* align-content: center; */
+    box-shadow: 5px 2px 7px 0px grey;
+}
+p{
+    width: 98%;
+    margin: auto
+}
+
+@media (max-width: 768px) {
+    .Nav,.Content {
+      display: block;
+      width: 95%;
+    }
+    .column {
+      width: 85%;
+      margin:5%;
+    }
+    text{
+        width: 100%;
+        margin:auto;
+    }
+
+  }
+  

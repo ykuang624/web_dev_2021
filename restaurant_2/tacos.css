@@ -1,0 +1,101 @@
+img {
+    height:max-content;
+}
+
+h1 {
+    font-size:90px;
+}
+.redtext{ 
+    color:brown;
+}
+
+
+.italic{
+    font-style: italic;
+}
+
+p{
+    font-size: 40px;  
+}
+
+#address_hours{
+    width:100%;
+}
+
+body{
+    width:95%;
+    margin:auto;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.border{
+    border-width:5px !important;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 60px;
+}
+
+h3{
+    font-size: 50px;
+    font-weight:500;
+}
+
+.button{
+    text-align: right;
+    margin-right:15px;
+}
+
+.menu_price{
+    color:green;
+    text-align: right;
+    margin-right:15px;
+}
+#menu, #totals{
+    width: 95%;
+    margin: auto;
+}
+
+.cart_price{
+    /* width: 50%; */
+    text-align: right;
+    margin-right:5%;
+    margin-left:auto;
+}
+
+.quantity{
+    text-align:left;
+    width:10%;
+    margin: auto;
+}
+
+.button_2{
+    margin:0 0 0 5px;
+    text-indent:-9999px;
+    cursor:pointer;
+    width:29px;
+    height:29px;
+    float:left;
+    text-align:center;
+    background:url(tacos.png) no-repeat}
+.quantity{
+    font-size: 40px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    opacity: 1;
+}   
+
+.button{
+    /* background:green; */
+    border-color:grey;
+    border-style:dotted;
+    text-align: center;
+}
+.button_after{
+    text-align: center;
+    background-color: green;
+    color:white;
+}

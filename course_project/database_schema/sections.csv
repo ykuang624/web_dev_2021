@@ -1,0 +1,10 @@
+﻿section_id,course_id,instructor_id,ta_id,grader_id,room_id,day_id,time_id,year,quarter,max_enrollment,open_for_registration
+1,1,123,352,142,1,1,1,2021,Fall,20,1
+2,1,123,352,142,1,1,2,2021,Fall,20,1
+3,1,234,352,143,2,2,1,2021,Fall,20,1
+4,2,241,,,3,1,4,2021,Fall,30,1
+5,3,256,,,4,2,3,2021,Fall,15,1
+6,4,352,,,5,3,3,2021,Fall,25,1
+7,5,234,,,6,1,4,2021,Fall,25,1
+8,6,12,,,7,1,3,2021,Fall,15,1
+9,7,13,,,7,2,4,2021,Fall,30,1
